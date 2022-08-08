@@ -1,9 +1,9 @@
 
 # Ability to save and share the qualifying loans to a CSV file
 
-This assignment is an enhancement to qualiying loans app. The purpose is to add an ablility to save the results of qualifying loan to csv file and be able to share the results as a spreedsheet.
+This assignment is an enhancement to loan_qualifier application. The purpose is to add an ablility to save the results of qualifying loans to csv file and be able to share the results as a spreedsheet.
 
-The qualifiying loans app(app.py) uses python 3.9 command line interface and two libraries i.e fire and questionary. This application uses bank data provided in daily_rate_sheet csv along with information keyed in by the user such as credit_score, income, debt, home_value, desired_loan and returns list of qualifying loans. However, if no qualiying loans exist, then program notify user and exit.
+The loan_qualifier app(app.py) uses python 3.9 command line interface and two libraries i.e fire and questionary. This application uses bank data provided in daily_rate_sheet csv along with information keyed in by the user such as credit_score, income, debt, home_value, desired_loan and returns list of qualifying loans. However, if no qualiying loans exist, then program notify user and exit.
 
 ## Technologies
 
