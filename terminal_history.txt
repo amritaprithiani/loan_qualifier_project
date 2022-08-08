@@ -1,0 +1,50 @@
+   42  python app.py
+   43  python app.py
+   44  python app.py
+   45  python app.py
+   46  python app.py
+   47  python app.py
+   48  python app.py
+   49  python app.py
+   50  python app.py
+   51  python app.py
+   52  python app.py
+   53  python app.py
+   54  cd ~
+   55  conda list pandas
+   56  conda list jupiterlab
+   57  conda list jupyterlab
+   58  conda deactivate dev
+   59  git config
+   60  git config --global user.name <amrita prithiani>
+   61  git config --global user.name Amrita Prithiani
+   62  git config --global user.email amritaprithiani@gmail.com
+   63  git clone git@github.com:amritaprithiani/loan_qualifier_project.git  
+   64  cd loan*
+   65  ls
+   66  git status
+   67  code .
+   68  git status
+   69  code .
+   70  git status
+   71  git add loan_qualifier_app
+   72  git init
+   73  git add loan_qualifier_app
+   74  git status
+   75  git gg
+   76  git status
+   77  git status
+   78  git add -A
+   79  git status
+   80  ls
+   81  cd loan*
+   82  ls
+   83  python app.py
+   84  cd ..
+   85  git status
+   86  git add .A
+   87  git add -A
+   88  git status
+   89  git commit -m "Adding loan qualifier project assignment"
+   90  git push
+   91  history 50 > terminal_history.txt
