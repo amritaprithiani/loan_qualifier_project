@@ -52,7 +52,7 @@ def save_qualifying_loans(qualifying_loans):
 
 
 ## Output Example
-![example]("C:\Users\amrit\loan_qualifier_project\2022-08-07.png")
+![example]("C:\Users\amrit\loan_qualifier_project\2022-08-08.png")
 
 ## Contributors
 
