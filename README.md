@@ -28,10 +28,9 @@ Before running the application first install the following dependencies.
 
 Saving Qualifying loans
 
-1. The application genrates list of qualifying loans and prompt user with an option to save as an csv file and to provide path to save the file. To achive this functionality following code has been added.
+The application genrates list of qualifying loans and prompt user with an option to save as an csv file and to provide path to save the file. To achive this functionality following code has been added.
 
 def save_qualifying_loans(qualifying_loans):
-    """Saves the qualifying loans to a CSV file.
 
 ```save_information = questionary.confirm("Do you want to save the qualifying loan results as CSV file").ask()
     
@@ -41,18 +40,35 @@ def save_qualifying_loans(qualifying_loans):
 
         save_csv(Path(path_to_save_file),qualifying_loans,header)```
 
+```
 
- 2. In case, if there are no qualifying loans, the program exits. To achive this following code is add to run function:
+ In case, if there are no qualifying loans, the program exits. To achive this following code is add to run function:
 
- ```if qualifying_loans:
-    # Save qualifying loans
+ ``` Save qualifying loans
+    if qualifying_loans:
         save_qualifying_loans(qualifying_loans)
     else:
-        sys.exit("No qualifying loans found")```
+        sys.exit("No qualifying loans found")
+        
+def save_csv(csvpath, data, header=None):
+    """Saves the CSV file from path provided.
 
+    Args:
+        csvpath (Path): The CSV file path.
+        data (list of lists): A list of the rows of data for the CSV file.
+        header (list): An optional header for the CSV.
+
+    """
+    with open(csvpath, "w", newline="") as csvfile:
+        csvwriter = csv.writer(csvfile, delimiter=',')
+        if header:
+            csvwriter.writerow(header)
+        csvwriter.writerows(data)        
+```
 
 ## Output Example
-![example]("C:\Users\amrit\loan_qualifier_project\2022-08-08.png")
+
+![example](2022-08-08.png)
 
 ## Contributors
 
@@ -61,3 +77,4 @@ Brought to you by Amrita Prithiani
 ## License
 
 MIT
+
