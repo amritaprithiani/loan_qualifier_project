@@ -1,9 +1,9 @@
 
 # Ability to save and share the qualifying loans to a CSV file
 
-This assignment is an enhancement to qualiying loans app. The purpose is to add an ablility to save the results of qualifying loan to csv file and be able to share the results as a spreedsheet.
+This assignment is an enhancement to loan_qualifier application. The purpose is to add an ablility to save the results of qualifying loans to csv file and be able to share the results as a spreedsheet.
 
-The qualifiying loans app(app.py) uses python 3.9 command line interface and two libraries i.e fire and questionary. This application uses bank data provided in daily_rate_sheet csv along with information keyed in by the user such as credit_score, income, debt, home_value, desired_loan and returns list of qualifying loans. However, if no qualiying loans exist, then program notify user and exit.
+The loan_qualifier app(app.py) uses python 3.9 command line interface and two libraries i.e fire and questionary. This application uses bank data provided in daily_rate_sheet csv along with information keyed in by the user such as credit_score, income, debt, home_value, desired_loan and returns list of qualifying loans. However, if no qualiying loans exist, then program notify user and exit.
 
 ## Technologies
 
@@ -26,14 +26,14 @@ Before running the application first install the following dependencies.
 
 ## Usage
 
-Saving Qualifying loans
-
 The application genrates list of qualifying loans and prompt user with an option to save as an csv file and to provide path to save the file. To achieve this functionality following code has been added.
+
+The application genrates list of qualifying loans and prompt user with an option to save as an csv file and to provide path to save the file. To achive this functionality following code has been added.
 
 ```python
 def save_qualifying_loans(qualifying_loans):
     save_information = questionary.confirm("Do you want to save the qualifying loan results as CSV file").ask()
-    
+
     if save_information:
         path_to_save_file = questionary.text("Provide the output path for qualifying loans results file").ask()
         header =["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score", "Interest Rate"]
@@ -54,15 +54,17 @@ def save_csv(csvpath, data, header=None):
         if header:
             csvwriter.writerow(header)
         csvwriter.writerows(data)
+
 ```
 
- In case, if there are no qualifying loans, the program exits. To achive this following code is add to run function:
+ In case, if there are no qualifying loans, the program exits. To achive this following code is add to run function
 
- ``` Save qualifying loans
+``` python
     if qualifying_loans:
         save_qualifying_loans(qualifying_loans)
     else:
         sys.exit("No qualifying loans found")
+
 ```
 
 ## Output Example
